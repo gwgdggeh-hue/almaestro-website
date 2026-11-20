@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -107,6 +108,7 @@ section {
   font-size: 30px;
   margin-bottom: 35px;
 }
+
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -162,6 +164,27 @@ section {
 .download p {
   color: #ccc;
   margin: 15px 0 25px;
+}
+
+.download-counter {
+  margin-top: 25px;
+  padding: 18px;
+  display: inline-block;
+  min-width: 220px;
+  background: #171717;
+  border: 1px solid #80651e;
+  border-radius: 15px;
+}
+
+.download-counter .number {
+  color: #d4af37;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.download-counter .label {
+  color: #ccc;
+  font-size: 14px;
 }
 
 footer {
@@ -308,9 +331,14 @@ footer strong {
     </p>
 
     <a href="https://github.com/gwgdggeh-hue/almaestro-website/releases/download/v1.0.0/app-elmaestro.apk"
-   class="gold-btn">
-  ⬇ تحميل التطبيق APK
-</a>
+       class="gold-btn">
+      ⬇ تحميل التطبيق APK
+    </a>
+
+    <div class="download-counter">
+      <div class="number" id="download-count">...</div>
+      <div class="label">إجمالي مرات تحميل التطبيق</div>
+    </div>
 
   </div>
 </section>
@@ -322,6 +350,40 @@ footer strong {
   <br>
   صُنع بشغف من أجل التعليم والتفوق ❤️
 </footer>
+
+<script>
+async function updateDownloadCount() {
+  const counter = document.getElementById("download-count");
+
+  try {
+    const response = await fetch(
+      "https://api.github.com/repos/gwgdggeh-hue/almaestro-website/releases/tags/v1.0.0"
+    );
+
+    if (!response.ok) {
+      throw new Error("GitHub API error");
+    }
+
+    const release = await response.json();
+
+    const apk = release.assets.find(
+      asset => asset.name === "app-elmaestro.apk"
+    );
+
+    if (!apk) {
+      throw new Error("APK not found");
+    }
+
+    counter.textContent =
+      apk.download_count.toLocaleString("ar-EG");
+
+  } catch (error) {
+    counter.textContent = "غير متاح حاليًا";
+  }
+}
+
+updateDownloadCount();
+</script>
 
 </body>
 </html>
