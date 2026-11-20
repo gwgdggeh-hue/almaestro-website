@@ -1,1 +1,327 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<title>المايسترو | ALMAESTRO</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: #080808;
+  color: white;
+  line-height: 1.8;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+header {
+  background: #101010;
+  border-bottom: 1px solid #d4af37;
+  padding: 15px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #d4af37;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.logo span {
+  display: block;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 5px;
+  font-size: 13px;
+}
+
+.hero {
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 15px;
+  background: radial-gradient(circle, #29200b, #080808 65%);
+}
+
+.hero h1 {
+  font-size: 65px;
+  color: #d4af37;
+  font-weight: 900;
+}
+
+.hero h2 {
+  font-size: 20px;
+  letter-spacing: 6px;
+}
+
+.hero p {
+  color: #ccc;
+  margin: 20px 0;
+}
+
+.gold-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffe28a, #d4af37);
+  color: #111;
+  padding: 13px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+section {
+  padding: 65px 0;
+}
+
+.section-title {
+  text-align: center;
+  color: #d4af37;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.feature {
+  background: #171717;
+  border: 1px solid #80651e;
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+}
+
+.feature .icon {
+  font-size: 40px;
+}
+
+.feature h3 {
+  color: #d4af37;
+  margin: 12px 0;
+}
+
+.feature p {
+  color: #bbb;
+  font-size: 14px;
+}
+
+.about {
+  background: #111;
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #80651e;
+}
+
+.download {
+  text-align: center;
+  background: radial-gradient(circle, #30240a, #080808);
+}
+
+.download h2 {
+  color: #d4af37;
+  font-size: 32px;
+}
+
+.download p {
+  color: #ccc;
+  margin: 15px 0 25px;
+}
+
+footer {
+  background: #111;
+  border-top: 1px solid #80651e;
+  text-align: center;
+  padding: 25px;
+  color: #aaa;
+}
+
+footer strong {
+  color: #d4af37;
+}
+
+@media(max-width:600px) {
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .section-title {
+    font-size: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        المايسترو
+        <span>ALMAESTRO</span>
+      </div>
+
+      <div>
+        <a href="#home">الرئيسية</a>
+        <a href="#features">المميزات</a>
+        <a href="#about">عن التطبيق</a>
+        <a href="#download">التحميل</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <div style="font-size:60px;color:#d4af37">♛</div>
+    <h1>المايسترو</h1>
+    <h2>ALMAESTRO</h2>
+
+    <p>
+      رحلتك نحو التفوق تبدأ من هنا
+      <br>
+      تعلم بذكاء واصنع مستقبلك
+    </p>
+
+    <a href="#download" class="gold-btn">
+      اكتشف التطبيق
+    </a>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <h2 class="section-title">مميزات التطبيق</h2>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="icon">📝</div>
+        <h3>الامتحانات</h3>
+        <p>اختبر مستواك وتدرب باستمرار.</p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">📚</div>
+        <h3>المذكرات</h3>
+        <p>محتوى تعليمي يساعدك في المذاكرة.</p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🎥</div>
+        <h3>الفيديوهات</h3>
+        <p>تابع الشروحات التعليمية.</p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🏆</div>
+        <h3>النتائج</h3>
+        <p>تابع نتائجك ومستواك الدراسي.</p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">👨‍🏫</div>
+        <h3>لوحة المدرس</h3>
+        <p>أدوات لتنظيم الامتحانات والطلاب.</p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">👥</div>
+        <h3>المجموعات</h3>
+        <p>تابع مجموعاتك التعليمية.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">عن المايسترو</h2>
+
+    <div class="about">
+      <p>
+        المايسترو منصة تعليمية تهدف إلى تقديم
+        تجربة تعلم سهلة ومنظمة للطلاب والمدرسين،
+        وتساعد على المذاكرة والتدريب ومتابعة النتائج.
+      </p>
+
+      <h3 style="color:#d4af37;margin-top:20px">
+        تعلم اليوم لتتفوق غدًا
+      </h3>
+    </div>
+  </div>
+</section>
+
+<section class="download" id="download">
+  <div class="container">
+    <div style="font-size:55px">📱</div>
+
+    <h2>حمّل تطبيق المايسترو</h2>
+
+    <p>
+      ابدأ رحلتك التعليمية الآن
+      من هاتفك الأندرويد.
+    </p>
+
+    <a href="#" class="gold-btn"
+       onclick="alert('سنضيف رابط تحميل التطبيق في الخطوة القادمة');return false;">
+      ⬇ تحميل التطبيق APK
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  جميع الحقوق محفوظة © 2026
+  <br>
+  <strong>ALMAESTRO</strong>
+  <br>
+  صُنع بشغف من أجل التعليم والتفوق ❤️
+</footer>
+
+</body>
+</html>
