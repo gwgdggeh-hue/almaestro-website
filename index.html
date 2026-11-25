@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080F20">
-<meta name="description" content="المايسترو ALMAESTRO - رحلتك نحو التفوق تبدأ من هنا">
+<meta name="description" content="المايسترو ALMAESTRO - التعليم والتطبيقات والبرامج في مكان واحد">
 <title>المايسترو | ALMAESTRO</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@ nav {
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 7%;
+padding:15px 5%;
 background:rgba(8,15,32,.96);
 position:fixed;
 top:0;
@@ -67,13 +67,14 @@ gap:10px;
 .nav-links {
 display:flex;
 align-items:center;
-gap:25px;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .nav-links a {
 color:white;
 font-weight:700;
-font-size:14px;
+font-size:13px;
 transition:.3s;
 }
 
@@ -86,7 +87,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:120px 20px 70px;
+padding:140px 20px 70px;
 background:radial-gradient(ellipse at center,#1b3154 0%,#101C38 35%,#080F20 75%);
 }
 
@@ -113,9 +114,16 @@ margin:5px 0 15px;
 .hero p {
 font-size:17px;
 color:var(--gray);
-max-width:600px;
+max-width:650px;
 line-height:2;
 margin:0 auto 30px;
+}
+
+.buttons {
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .btn-download {
@@ -125,9 +133,9 @@ align-items:center;
 gap:12px;
 background:linear-gradient(45deg,#B98B32,#F2D48B);
 color:#080F20;
-padding:15px 35px;
+padding:14px 28px;
 border-radius:50px;
-font-size:18px;
+font-size:16px;
 font-weight:900;
 box-shadow:0 0 25px rgba(214,173,82,.3);
 transition:.3s;
@@ -138,7 +146,25 @@ transform:translateY(-5px);
 box-shadow:0 0 35px rgba(214,173,82,.55);
 }
 
-section {scroll-margin-top:85px;}
+.btn-outline {
+display:inline-flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+border:1px solid var(--gold);
+color:var(--champagne);
+padding:13px 25px;
+border-radius:50px;
+font-weight:800;
+transition:.3s;
+}
+
+.btn-outline:hover {
+background:var(--gold);
+color:var(--midnight);
+}
+
+section {scroll-margin-top:100px;}
 
 .features {
 padding:90px 7%;
@@ -155,7 +181,7 @@ margin-bottom:15px;
 .section-subtitle {
 text-align:center;
 color:var(--gray);
-margin-bottom:50px;
+margin-bottom:45px;
 }
 
 .features-grid {
@@ -198,7 +224,54 @@ font-size:14px;
 line-height:1.9;
 }
 
-/* قسم المطور */
+/* المتجر والمكتبة */
+
+.platform {
+padding:85px 7%;
+background:linear-gradient(180deg,#101C38,#080F20);
+}
+
+.platform-grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+max-width:1000px;
+margin:auto;
+}
+
+.platform-card {
+background:linear-gradient(145deg,#17294A,#0B1428);
+padding:35px 25px;
+border:1px solid rgba(214,173,82,.35);
+border-radius:22px;
+text-align:center;
+transition:.3s;
+}
+
+.platform-card:hover {
+transform:translateY(-7px);
+border-color:var(--gold);
+}
+
+.platform-card i {
+font-size:55px;
+color:var(--gold);
+margin-bottom:20px;
+}
+
+.platform-card h3 {
+color:var(--champagne);
+font-size:23px;
+margin-bottom:12px;
+}
+
+.platform-card p {
+color:var(--gray);
+font-size:14px;
+margin-bottom:22px;
+}
+
+/* المطور */
 
 .developer {
 padding:90px 20px;
@@ -239,15 +312,7 @@ margin-top:5px;
 font-size:15px;
 }
 
-.phone-number {
-direction:ltr;
-color:var(--champagne);
-font-size:21px;
-font-weight:800;
-margin-top:20px;
-}
-
-.whatsapp-btn {
+.contact-btn {
 display:inline-flex;
 align-items:center;
 justify-content:center;
@@ -257,35 +322,17 @@ padding:14px 30px;
 background:#25D366;
 color:white;
 border-radius:50px;
-font-size:17px;
+font-size:16px;
 font-weight:900;
 transition:.3s;
 }
 
-.whatsapp-btn:hover {
+.contact-btn:hover {
 background:#128C7E;
 transform:translateY(-4px);
 }
 
-.social-links {
-display:flex;
-justify-content:center;
-gap:25px;
-margin-top:28px;
-}
-
-.social-links a {
-color:white;
-font-size:25px;
-transition:.3s;
-}
-
-.social-links a:hover {
-color:var(--gold);
-transform:translateY(-4px);
-}
-
-/* قسم التحميل */
+/* تحميل التطبيق */
 
 .download-section {
 padding:90px 20px;
@@ -325,6 +372,8 @@ color:var(--gray);
 margin-top:20px;
 }
 
+/* الفوتر */
+
 footer {
 text-align:center;
 padding:30px 15px;
@@ -336,19 +385,28 @@ font-size:13px;
 
 footer strong {color:var(--gold);}
 
+.footer-links {
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin:15px 0;
+}
+
+.footer-links a {color:var(--champagne);}
+
+.footer-links a:hover {color:white;}
+
 @keyframes fadeIn {
 from {opacity:0;transform:translateY(25px);}
 to {opacity:1;transform:translateY(0);}
 }
 
-.fade-in {
-animation:fadeIn 1s ease forwards;
-}
+.fade-in {animation:fadeIn 1s ease forwards;}
 
-@media(max-width:650px) {
-
+@media(max-width:700px) {
 nav {
-padding:12px 4%;
+padding:10px 3%;
 flex-direction:column;
 gap:8px;
 }
@@ -358,24 +416,20 @@ gap:8px;
 .nav-links {
 width:100%;
 justify-content:center;
-gap:15px;
-flex-wrap:wrap;
+gap:12px;
 }
 
-.nav-links a {font-size:12px;}
+.nav-links a {font-size:11px;}
 
-.hero {padding-top:145px;}
+.hero {padding-top:160px;}
 
 .hero p {font-size:15px;}
 
-.btn-download {
-font-size:15px;
-padding:13px 24px;
-}
+.btn-download {font-size:14px;padding:12px 20px;}
 
-.features {padding:70px 5%;}
+.features,.platform {padding:65px 5%;}
 
-.features-grid {
+.features-grid,.platform-grid {
 grid-template-columns:1fr;
 gap:18px;
 }
@@ -385,7 +439,6 @@ gap:18px;
 .download-box {padding:30px 15px;}
 
 .dev-card {padding:30px 15px;}
-
 }
 </style>
 </head>
@@ -404,6 +457,8 @@ ALMAESTRO
 <div class="nav-links">
 <a href="#home">الرئيسية</a>
 <a href="#features">المميزات</a>
+<a href="store.html">المتجر</a>
+<a href="library.html">المكتبة</a>
 <a href="#developer">المطور</a>
 <a href="#download">تحميل التطبيق</a>
 </div>
@@ -422,17 +477,26 @@ ALMAESTRO
 
 <h1>المايسترو</h1>
 
-<h2>ALMAESTRO EDUCATION</h2>
+<h2>ALMAESTRO EDUCATION & STORE</h2>
 
 <p>
 رحلتك نحو التفوق تبدأ من هنا.
-تعلم بذكاء، طور مهاراتك، واصنع مستقبلك مع المايسترو.
+تعلم بذكاء، طور مهاراتك، واستكشف عالم البرامج والتطبيقات مع المايسترو.
 </p>
+
+<div class="buttons">
 
 <a href="#download" class="btn-download">
 <i class="fas fa-download"></i>
-اكتشف التطبيق
+تحميل التطبيق
 </a>
+
+<a href="store.html" class="btn-outline">
+<i class="fas fa-store"></i>
+دخول المتجر
+</a>
+
+</div>
 
 </div>
 
@@ -445,7 +509,7 @@ ALMAESTRO
 <h2 class="section-title">لماذا المايسترو؟</h2>
 
 <p class="section-subtitle">
-كل ما تحتاجه لتجربة تعليمية مميزة
+كل ما تحتاجه لتجربة تعليمية وتقنية مميزة
 </p>
 
 <div class="features-grid">
@@ -478,6 +542,48 @@ ALMAESTRO
 
 </section>
 
+<!-- المتجر والمكتبة -->
+
+<section class="platform">
+
+<h2 class="section-title">اكتشف عالم المايسترو</h2>
+
+<p class="section-subtitle">
+التعليم والتطبيقات والبرامج في مكان واحد
+</p>
+
+<div class="platform-grid">
+
+<div class="platform-card">
+<i class="fas fa-store"></i>
+<h3>ALMAESTRO STORE</h3>
+<p>
+متجر للبرامج والتطبيقات الخاصة بأندرويد وWindows،
+مع مراجعة طلبات النشر قبل إتاحتها.
+</p>
+<a href="store.html" class="btn-download">
+<i class="fas fa-arrow-left"></i>
+تصفح المتجر
+</a>
+</div>
+
+<div class="platform-card">
+<i class="fas fa-book-open"></i>
+<h3>مكتبة المايسترو</h3>
+<p>
+مقالات وشروحات تعليمية ومعلومات تساعدك على
+التعلم والمراجعة وتطوير مهاراتك.
+</p>
+<a href="library.html" class="btn-download">
+<i class="fas fa-arrow-left"></i>
+افتح المكتبة
+</a>
+</div>
+
+</div>
+
+</section>
+
 <!-- المطور -->
 
 <section id="developer" class="developer">
@@ -492,7 +598,7 @@ ALMAESTRO
 
 <img
 src="mahmoud-kleib.jpg"
-alt="صورة محمود كليب"
+alt="صورة مطور المايسترو"
 class="dev-img"
 >
 
@@ -502,37 +608,10 @@ class="dev-img"
 مطور تطبيق المايسترو ALMAESTRO
 </p>
 
-<div class="phone-number">
-01112244710
-</div>
-
-<a
-href="https://wa.me/201112244710"
-class="whatsapp-btn"
-target="_blank"
-rel="noopener"
->
-<i class="fab fa-whatsapp"></i>
-تواصل معي عبر واتساب
-</a>
-
-<div class="social-links">
-
-<a href="https://www.facebook.com/klyb2802"
-target="_blank" rel="noopener">
-<i class="fab fa-facebook"></i>
-</a>
-
-<a href="https://www.instagram.com/klyb2802"
-target="_blank" rel="noopener">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="mailto:gwgdggeh@gmail.com">
+<a href="contact.html" class="contact-btn">
 <i class="fas fa-envelope"></i>
+تواصل مع إدارة المايسترو
 </a>
-
-</div>
 
 </div>
 
@@ -584,17 +663,18 @@ class="btn-download"
 
 <p><strong>ALMAESTRO</strong></p>
 
+<div class="footer-links">
+<a href="store.html">متجر المايسترو</a>
+<a href="library.html">المكتبة التعليمية</a>
+<a href="privacy.html">سياسة الخصوصية</a>
+<a href="contact.html">تواصل معنا</a>
+</div>
+
 <p>جميع الحقوق محفوظة © 2026</p>
-
-<p>المايسترو التعليمي - محمود كليب</p>
+<p>المايسترو التعليمي - ALMAESTRO</p>
 
 </footer>
-<footer style="text-align:center; padding:25px; background:#080808; color:#d4af37;">
-  <a href="privacy.html" style="color:#d4af37; margin:10px;">سياسة الخصوصية</a>
-  |
-  <a href="contact.html" style="color:#d4af37; margin:10px;">تواصل معنا</a>
-  <p>© 2026 ALMAESTRO - جميع الحقوق محفوظة</p>
-</footer>
+
 </body>
-    </html>
-    
+  </html>
+                             
