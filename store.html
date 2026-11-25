@@ -4,231 +4,494 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080F20">
-<meta name="description" content="ALMAESTRO STORE - متجر التطبيقات والبرامج">
-<title>ALMAESTRO STORE | متجر المايسترو</title>
+<meta name="theme-color" content="#102B32">
+<meta name="description" content="MADAR - منصة التطبيقات والمعرفة والإبداع">
+<title>مَدار | MADAR</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 :root {
-  --midnight:#080F20;
-  --navy:#101C38;
-  --gold:#D6AD52;
-  --champagne:#F2D48B;
-  --white:#fff;
-  --gray:#AAB3C5;
+  --bg:#F5F3EC;
+  --surface:#FFFFFF;
+  --dark:#102B32;
+  --dark2:#183C42;
+  --teal:#65D6C1;
+  --coral:#E9A477;
+  --text:#18343A;
+  --muted:#77878A;
+  --border:#E5EAE6;
+  --shadow:0 12px 35px rgba(16,43,50,.08);
 }
-* {box-sizing:border-box;margin:0;padding:0}
-body {
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
   font-family:'Cairo',sans-serif;
-  background:var(--midnight);
-  color:var(--white);
+  background:var(--bg);
+  color:var(--text);
   line-height:1.8;
 }
-header {
-  background:#0c1730;
-  border-bottom:1px solid #3b3150;
-  padding:15px 6%;
+header{
+  background:var(--dark);
+  color:white;
+  padding:16px 5%;
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
+  gap:15px;
   flex-wrap:wrap;
-  gap:12px;
 }
-.logo {
-  color:var(--gold);
-  font-size:23px;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:11px;
+}
+.brand-icon{
+  width:45px;height:45px;
+  display:grid;place-items:center;
+  background:var(--teal);
+  color:var(--dark);
+  border-radius:15px;
+  font-size:21px;
+}
+.brand-name{
+  font-size:24px;
   font-weight:900;
+  color:white;
 }
-nav {display:flex;gap:18px;flex-wrap:wrap}
-nav a {
-  color:var(--white);
+.brand-name span{color:var(--teal)}
+header nav{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+header nav a{
+  color:#D8E8E4;
   text-decoration:none;
   font-size:14px;
+  font-weight:700;
 }
-nav a:hover {color:var(--gold)}
-.hero {
+header nav a:hover{color:var(--teal)}
+
+.hero{
+  background:
+  radial-gradient(circle at 15% 15%,#28615C 0%,transparent 35%),
+  linear-gradient(135deg,#102B32,#183C42);
+  color:white;
   text-align:center;
-  padding:75px 20px 55px;
-  background:radial-gradient(ellipse at top,#1b3158 0%,#080F20 70%);
+  padding:65px 20px 75px;
+  border-radius:0 0 35px 35px;
 }
-.hero h1 {
-  color:var(--gold);
-  font-size:clamp(30px,6vw,48px);
+.hero .symbol{
+  width:75px;height:75px;
+  margin:auto auto 15px;
+  border:1px solid #65D6C188;
+  border-radius:25px;
+  display:grid;place-items:center;
+  color:var(--teal);
+  font-size:34px;
+}
+.hero h1{
+  font-size:clamp(38px,8vw,65px);
   font-weight:900;
 }
-.hero p {
-  color:var(--gray);
-  max-width:650px;
-  margin:12px auto 25px;
+.hero h1 span{color:var(--teal)}
+.hero p{
+  max-width:570px;
+  margin:10px auto;
+  color:#C7DAD5;
 }
-.btn {
-  display:inline-block;
-  background:linear-gradient(135deg,var(--gold),var(--champagne));
-  color:#101827;
-  padding:12px 25px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:900;
-  margin:7px;
-  transition:.2s;
+.hero .sub{
+  color:var(--coral);
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:2px;
 }
-.btn:hover {transform:translateY(-3px)}
-.btn-outline {
-  background:transparent;
-  border:1px solid var(--gold);
-  color:var(--gold);
+.container{
+  width:min(1050px,92%);
+  margin:38px auto;
 }
-.container {
-  width:min(1100px,92%);
-  margin:35px auto;
-}
-.section-title {
-  color:var(--gold);
-  font-size:25px;
-  margin-bottom:20px;
+.section-heading{
   text-align:center;
+  margin-bottom:24px;
 }
-.categories {
+.section-heading h2{
+  font-size:26px;
+  font-weight:900;
+  color:var(--dark);
+}
+.section-heading p{
+  color:var(--muted);
+  font-size:14px;
+}
+.dashboard{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:18px;
 }
-.card {
-  background:linear-gradient(145deg,#142443,#0d172d);
-  border:1px solid #34415b;
-  border-radius:18px;
+.tile{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:23px;
   padding:25px;
+  text-decoration:none;
+  color:var(--text);
+  box-shadow:var(--shadow);
+  transition:.25s;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  min-height:135px;
+}
+.tile:hover{
+  transform:translateY(-5px);
+  border-color:var(--teal);
+}
+.tile-icon{
+  flex-shrink:0;
+  width:65px;height:65px;
+  border-radius:20px;
+  display:grid;place-items:center;
+  font-size:27px;
+}
+.icon-teal{background:#E0F6F0;color:#238B79}
+.icon-coral{background:#FFF0E6;color:#C7794A}
+.icon-blue{background:#E8F0F4;color:#39728A}
+.icon-purple{background:#F0EAF8;color:#8564A7}
+.tile h3{
+  font-size:19px;
+  font-weight:900;
+}
+.tile p{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:4px;
+}
+.arrow{
+  margin-right:auto;
+  color:#91A4A1;
+}
+.panel{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:23px;
+  padding:28px;
+  margin-top:35px;
+  box-shadow:var(--shadow);
+}
+.panel h2{
+  color:var(--dark);
+  font-size:23px;
+  font-weight:900;
+  margin-bottom:6px;
+}
+.panel-intro{
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:20px;
+}
+.categories{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:15px;
+}
+.category{
+  background:#F6F9F6;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:22px;
   text-align:center;
+  text-decoration:none;
+  color:var(--text);
   transition:.2s;
 }
-.card:hover {
-  border-color:var(--gold);
-  transform:translateY(-4px);
+.category:hover{
+  border-color:var(--teal);
+  background:#ECF8F4;
 }
-.card .emoji {font-size:38px}
-.card h3 {color:var(--champagne);margin:8px 0}
-.card p {color:var(--gray);font-size:14px}
-.request {
-  margin:45px auto;
-  padding:35px 20px;
+.category i{
+  font-size:30px;
+  color:#278D7C;
+  margin-bottom:8px;
+}
+.category h3{font-size:17px}
+.category p{
+  color:var(--muted);
+  font-size:12px;
+}
+.empty{
+  margin-top:18px;
+  padding:18px;
+  background:#F6F9F6;
+  border-radius:15px;
   text-align:center;
-  background:linear-gradient(145deg,#172747,#10182b);
-  border:1px solid var(--gold);
-  border-radius:20px;
-}
-.request h2 {color:var(--gold);margin-bottom:10px}
-.request p {color:var(--gray);margin-bottom:15px}
-.notice {
-  background:#172238;
-  border-right:4px solid var(--gold);
-  padding:15px;
-  border-radius:10px;
-  color:var(--gray);
-  margin-top:20px;
-  font-size:14px;
-}
-footer {
-  text-align:center;
-  padding:25px 15px;
-  color:var(--gray);
-  border-top:1px solid #26344d;
-  margin-top:45px;
+  color:var(--muted);
   font-size:13px;
 }
-footer a {color:var(--gold);text-decoration:none}
+.empty i{
+  display:block;
+  font-size:25px;
+  color:#9AB6AD;
+  margin-bottom:5px;
+}
+.primary-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  background:var(--dark);
+  color:white;
+  padding:12px 23px;
+  border-radius:13px;
+  text-decoration:none;
+  font-weight:800;
+  transition:.2s;
+  border:0;
+  font-family:inherit;
+  cursor:pointer;
+}
+.primary-btn:hover{background:#24534F}
+.teacher-note{
+  background:#EAF5F1;
+  border-right:4px solid var(--teal);
+  padding:14px;
+  border-radius:12px;
+  color:#355D55;
+  font-size:13px;
+  margin-top:15px;
+}
+.settings-box{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:15px;
+}
+.settings-box a{
+  text-decoration:none;
+  color:var(--dark);
+  background:#F4F7F4;
+  border:1px solid var(--border);
+  padding:10px 15px;
+  border-radius:12px;
+  font-size:13px;
+  font-weight:700;
+}
+.developer{
+  text-align:center;
+  background:var(--dark);
+  color:white;
+  border-radius:23px;
+  padding:28px 15px;
+  margin-top:35px;
+}
+.developer .avatar{
+  width:65px;height:65px;
+  margin:auto auto 10px;
+  border-radius:50%;
+  background:#24534F;
+  color:var(--teal);
+  display:grid;place-items:center;
+  font-size:25px;
+}
+.developer h3{font-size:21px}
+.developer p{
+  color:#C4D9D2;
+  font-size:13px;
+}
+footer{
+  text-align:center;
+  padding:25px 15px;
+  color:var(--muted);
+  font-size:12px;
+}
+footer a{color:#278D7C;text-decoration:none}
+body.dark-mode{
+  --bg:#101D20;
+  --surface:#192B2E;
+  --text:#E6F0EC;
+  --muted:#A7B9B4;
+  --border:#304346;
+  --shadow:0 12px 35px rgba(0,0,0,.16);
+}
+body.dark-mode .section-heading h2,
+body.dark-mode .panel h2{color:#E6F0EC}
+body.dark-mode .category,
+body.dark-mode .empty,
+body.dark-mode .settings-box a{
+  background:#203638;
+  color:#E6F0EC;
+  border-color:#365052;
+}
+body.dark-mode .teacher-note{
+  background:#203B36;color:#C9E7DC;
+}
+@media(max-width:600px){
+  header{justify-content:center}
+  header nav{justify-content:center;gap:13px}
+  .hero{padding:48px 16px 58px}
+  .dashboard{gap:11px}
+  .tile{
+    padding:15px 11px;
+    min-height:130px;
+    flex-direction:column;
+    text-align:center;
+    gap:7px;
+  }
+  .tile-icon{width:52px;height:52px;font-size:22px}
+  .tile h3{font-size:15px}
+  .tile p{font-size:11px}
+  .arrow{display:none}
+  .categories{grid-template-columns:1fr}
+  .panel{padding:20px 15px}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">ALMAESTRO STORE</div>
+  <div class="brand">
+    <div class="brand-icon"><i class="fa-solid fa-compass"></i></div>
+    <div class="brand-name">مَدار <span>MADAR</span></div>
+  </div>
   <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="#categories">الأقسام</a>
-    <a href="#request">اطلب نشر تطبيقك</a>
+    <a href="#home">الرئيسية</a>
+    <a href="#apps">التطبيقات</a>
     <a href="library.html">المكتبة</a>
   </nav>
 </header>
 
-<section class="hero">
-  <h1>ALMAESTRO STORE</h1>
-  <p>
-    عالم التطبيقات والبرامج والأدوات الرقمية.
-    اكتشف برامج جديدة، وشارك تطبيقك مع مجتمع المايسترو.
-  </p>
-  <a href="#categories" class="btn">استكشف الأقسام</a>
-  <a href="#request" class="btn btn-outline">اطلب نشر تطبيقك</a>
+<section class="hero" id="home">
+  <div class="symbol"><i class="fa-solid fa-compass"></i></div>
+  <h1>أهلاً بك في <span>مَدار</span></h1>
+  <p>اكتشف التطبيقات، وتعلّم من المعرفة، وشارك إبداعك في منصة واحدة.</p>
+  <div class="sub">MADAR • DISCOVER YOUR WORLD</div>
 </section>
 
 <main class="container">
 
-  <h2 class="section-title" id="categories">أقسام المتجر</h2>
-
-  <div class="categories">
-
-    <div class="card">
-      <div class="emoji">📱</div>
-      <h3>تطبيقات Android</h3>
-      <p>مساحة مخصصة لتطبيقات الهواتف والأجهزة الذكية.</p>
-    </div>
-
-    <div class="card">
-      <div class="emoji">💻</div>
-      <h3>برامج Windows</h3>
-      <p>برامج وأدوات مفيدة لأجهزة الكمبيوتر.</p>
-    </div>
-
-    <div class="card">
-      <div class="emoji">🎮</div>
-      <h3>الألعاب</h3>
-      <p>قسم مخصص للألعاب والتجارب الترفيهية.</p>
-    </div>
-
-    <div class="card">
-      <div class="emoji">📚</div>
-      <h3>الأدوات التعليمية</h3>
-      <p>تطبيقات وبرامج تساعد على التعلم والتطوير.</p>
-    </div>
-
+  <div class="section-heading">
+    <h2>ابدأ رحلتك</h2>
+    <p>اختر القسم الذي تريد الدخول إليه</p>
   </div>
 
-  <section class="request" id="request">
-    <h2>هل لديك تطبيق أو برنامج؟</h2>
-    <p>
-      يمكنك تقديم طلب لنشر تطبيقك أو برنامجك داخل
-      ALMAESTRO STORE.
-    </p>
+  <section class="dashboard">
 
-    <a
-      class="btn"
-      href="https://docs.google.com/forms/d/e/1FAIpQLSflaHJIGbEhtZip6PhW0ZidCC1ifAKGcmTOhY6Q13h7xww1Qg/viewform?usp=sharing&ouid=100827571577331139700"
-      target="_blank"
-      rel="noopener noreferrer">
-      📝 اطلب نشر تطبيقك الآن
+    <a class="tile" href="https://docs.google.com/forms/d/e/1FAIpQLSflaHJIGbEhtZip6PhW0ZidCC1ifAKGcmTOhY6Q13h7xww1Qg/viewform?usp=sharing&ouid=100827571577331139700" target="_blank" rel="noopener noreferrer">
+      <div class="tile-icon icon-teal"><i class="fa-solid fa-circle-plus"></i></div>
+      <div>
+        <h3>إضافة تطبيق</h3>
+        <p>قدّم طلب نشر تطبيقك أو برنامجك</p>
+      </div>
+      <i class="fa-solid fa-chevron-left arrow"></i>
     </a>
 
-    <div class="notice">
-      <strong>ملاحظة مهمة:</strong>
-      إرسال الطلب لا يعني نشر التطبيق تلقائيًا.
-      تتم مراجعة الطلب أولًا، ولا يظهر أي تطبيق في المتجر
-      إلا بعد الموافقة عليه والتحقق من سلامته وحقوق نشره.
+    <a class="tile" href="#apps">
+      <div class="tile-icon icon-coral"><i class="fa-solid fa-grid-2"></i></div>
+      <div>
+        <h3>التطبيقات</h3>
+        <p>تصفح تطبيقات Android وبرامج Windows</p>
+      </div>
+      <i class="fa-solid fa-chevron-left arrow"></i>
+    </a>
+
+    <a class="tile" href="library.html">
+      <div class="tile-icon icon-blue"><i class="fa-solid fa-book-open"></i></div>
+      <div>
+        <h3>المكتبة</h3>
+        <p>الكتب والمذكرات والمحتوى التعليمي</p>
+      </div>
+      <i class="fa-solid fa-chevron-left arrow"></i>
+    </a>
+
+    <a class="tile" href="#settings">
+      <div class="tile-icon icon-purple"><i class="fa-solid fa-sliders"></i></div>
+      <div>
+        <h3>الإعدادات والمطور</h3>
+        <p>إعدادات العرض ومعلومات المنصة</p>
+      </div>
+      <i class="fa-solid fa-chevron-left arrow"></i>
+    </a>
+
+  </section>
+
+  <section class="panel" id="apps">
+    <h2><i class="fa-solid fa-layer-group"></i> التطبيقات والبرامج</h2>
+    <p class="panel-intro">اختر نظام التشغيل لاستكشاف التطبيقات المتاحة.</p>
+
+    <div class="categories">
+      <a class="category" href="#android">
+        <i class="fa-brands fa-android"></i>
+        <h3>تطبيقات Android</h3>
+        <p>تطبيقات الهواتف والأجهزة الذكية</p>
+      </a>
+
+      <a class="category" href="#windows">
+        <i class="fa-brands fa-windows"></i>
+        <h3>برامج Windows</h3>
+        <p>برامج وأدوات أجهزة الكمبيوتر</p>
+      </a>
     </div>
+
+    <div class="empty" id="android">
+      <i class="fa-brands fa-android"></i>
+      تطبيقات Android المعتمدة ستظهر هنا بعد مراجعتها والموافقة عليها.
+    </div>
+
+    <div class="empty" id="windows">
+      <i class="fa-brands fa-windows"></i>
+      برامج Windows المعتمدة ستظهر هنا بعد مراجعتها والموافقة عليها.
+    </div>
+  </section>
+
+  <section class="panel" id="settings">
+    <h2><i class="fa-solid fa-gear"></i> الإعدادات</h2>
+    <p class="panel-intro">خصص طريقة عرض منصة مَدار.</p>
+
+    <div class="settings-box">
+      <a href="#" id="themeToggle">
+        <i class="fa-solid fa-moon"></i>
+        تبديل الوضع الليلي
+      </a>
+      <a href="privacy.html">
+        <i class="fa-solid fa-shield-halved"></i>
+        سياسة الخصوصية
+      </a>
+      <a href="contact.html">
+        <i class="fa-solid fa-envelope"></i>
+        تواصل معنا
+      </a>
+    </div>
+  </section>
+
+  <section class="developer">
+    <div class="avatar"><i class="fa-solid fa-code"></i></div>
+    <h3>محمود كليب</h3>
+    <p>مؤسس ومطور منصة مَدار</p>
+    <p>Developed with care by Mahmoud Kleib</p>
   </section>
 
 </main>
 
 <footer>
-  <p>© 2026 ALMAESTRO STORE - جميع الحقوق محفوظة</p>
-  <p>
-    <a href="index.html">الرئيسية</a> |
-    <a href="privacy.html">سياسة الخصوصية</a> |
-    <a href="contact.html">تواصل معنا</a>
-  </p>
+  <p>© 2026 MADAR - جميع الحقوق محفوظة</p>
+  <p><a href="index.html">الموقع الرئيسي</a> | <a href="privacy.html">الخصوصية</a></p>
 </footer>
 
+<script>
+const themeButton = document.getElementById("themeToggle");
+
+themeButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  document.body.classList.toggle("dark-mode");
+
+  const isDark = document.body.classList.contains("dark-mode");
+  themeButton.innerHTML = isDark
+    ? '<i class="fa-solid fa-sun"></i> تفعيل الوضع الفاتح'
+    : '<i class="fa-solid fa-moon"></i> تبديل الوضع الليلي';
+});
+</script>
+
 </body>
-  </html>
-                                               
+</html>
