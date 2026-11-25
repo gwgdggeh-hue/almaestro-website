@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d1b">
+<title>ALMAESTRO STORE | متجر المايسترو</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#080d1b;color:#fff;
+ font-family:Arial,sans-serif;line-height:1.8
+}
+header{
+ background:linear-gradient(135deg,#101d38,#080d1b);
+ padding:35px 15px;text-align:center;
+ border-bottom:2px solid #d4af37
+}
+.logo{font-size:30px;font-weight:900;color:#d4af37}
+header p{color:#c8c8c8}
+nav{
+ display:flex;justify-content:center;gap:20px;
+ flex-wrap:wrap;padding:15px;background:#10182a
+}
+nav a{color:#d4af37;text-decoration:none}
+.container{max-width:1100px;margin:auto;padding:20px}
+.hero{
+ text-align:center;padding:35px 15px;
+ background:linear-gradient(135deg,#17294a,#10182a);
+ border:1px solid #806c32;border-radius:18px
+}
+h1,h2,h3{color:#d4af37}
+.search{
+ width:100%;padding:15px;border-radius:12px;
+ border:1px solid #d4af37;background:#111a2b;
+ color:white;font-size:16px;margin-top:20px
+}
+.categories{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+ gap:12px;margin:25px 0
+}
+.category{
+ background:#14213a;border:1px solid #806c32;
+ border-radius:13px;padding:18px;text-align:center;
+ color:#fff;text-decoration:none
+}
+.category:hover{background:#25395d}
+.grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+ gap:18px
+}
+.card{
+ background:#121b2d;border:1px solid #34415b;
+ border-radius:15px;padding:20px
+}
+.card p{color:#c5cbd5}
+.icon{font-size:35px}
+.tag{
+ display:inline-block;background:#293b56;
+ color:#d4af37;padding:3px 12px;border-radius:20px;
+ font-size:13px
+}
+.button{
+ display:inline-block;background:#d4af37;color:#080d1b;
+ padding:11px 20px;border-radius:9px;
+ text-decoration:none;font-weight:bold
+}
+.notice{
+ border-right:4px solid #d4af37;
+ background:#18243a;padding:15px;margin:25px 0;
+ border-radius:8px
+}
+footer{
+ text-align:center;padding:25px;margin-top:40px;
+ border-top:1px solid #806c32;color:#d4af37
+}
+footer a{color:#d4af37;margin:8px}
+.hidden{display:none}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="logo">👑 ALMAESTRO STORE</div>
+ <h1>متجر المايسترو للبرامج والتطبيقات</h1>
+ <p>كل أدواتك وبرامجك في مكان واحد</p>
+</header>
+
+<nav>
+ <a href="index.html">الرئيسية</a>
+ <a href="#android">تطبيقات أندرويد</a>
+ <a href="#windows">برامج الكمبيوتر</a>
+ <a href="#publish">طلب نشر برنامج</a>
+</nav>
+
+<div class="container">
+
+ <section class="hero">
+  <h2>مرحبًا بك في ALMAESTRO STORE</h2>
+  <p>
+   منصة تجمع التطبيقات والبرامج المفيدة للطلاب
+   والمستخدمين، مع مراجعة طلبات النشر قبل إتاحتها.
+  </p>
+  <input class="search" id="search"
+   type="search" placeholder="ابحث عن تطبيق أو برنامج...">
+ </section>
+
+ <h2>الأقسام الرئيسية</h2>
+
+ <section class="categories">
+  <a class="category" href="#android">
+   <div class="icon">📱</div>
+   تطبيقات أندرويد
+  </a>
+  <a class="category" href="#windows">
+   <div class="icon">💻</div>
+   برامج Windows
+  </a>
+  <a class="category" href="#education">
+   <div class="icon">📚</div>
+   برامج تعليمية
+  </a>
+  <a class="category" href="#tools">
+   <div class="icon">🛠️</div>
+   أدوات ومساعدات
+  </a>
+  <a class="category" href="#games">
+   <div class="icon">🎮</div>
+   ألعاب
+  </a>
+ </section>
+
+ <div class="notice">
+  <strong>تنبيه:</strong>
+  لا يتم نشر أي تطبيق أو برنامج يرسله المستخدم
+  إلا بعد مراجعته وموافقة إدارة المايسترو.
+ </div>
+
+ <h2 id="android">📱 تطبيقات أندرويد</h2>
+ <div class="grid">
+  <article class="card product">
+   <div class="icon">📲</div>
+   <span class="tag">Android</span>
+   <h3>التطبيقات الجديدة</h3>
+   <p>سيتم عرض التطبيقات المقبولة في هذا القسم.</p>
+  </article>
+ </div>
+
+ <h2 id="windows">💻 برامج الكمبيوتر</h2>
+ <div class="grid">
+  <article class="card product">
+   <div class="icon">🖥️</div>
+   <span class="tag">Windows</span>
+   <h3>برامج الكمبيوتر</h3>
+   <p>سيتم عرض برامج الكمبيوتر بعد مراجعتها واعتمادها.</p>
+  </article>
+ </div>
+
+ <h2 id="education">📚 البرامج التعليمية</h2>
+ <div class="grid">
+  <article class="card product">
+   <div class="icon">🎓</div>
+   <span class="tag">تعليم</span>
+   <h3>التعليم والتعلم</h3>
+   <p>تطبيقات وأدوات تساعد على التعلم وتنظيم الدراسة.</p>
+  </article>
+ </div>
+
+ <h2 id="tools">🛠️ الأدوات والمساعدات</h2>
+ <div class="grid">
+  <article class="card product">
+   <div class="icon">⚙️</div>
+   <span class="tag">Tools</span>
+   <h3>أدوات مفيدة</h3>
+   <p>مساحة للأدوات والبرامج المفيدة بعد اعتمادها.</p>
+  </article>
+ </div>
+
+ <h2 id="games">🎮 الألعاب</h2>
+ <div class="grid">
+  <article class="card product">
+   <div class="icon">🎮</div>
+   <span class="tag">Games</span>
+   <h3>الألعاب</h3>
+   <p>الألعاب المقبولة التي تستوفي شروط النشر.</p>
+  </article>
+ </div>
+
+ <section class="card" id="publish" style="margin-top:35px">
+  <h2>📤 هل تريد نشر برنامجك معنا؟</h2>
+  <p>
+   يمكنك تقديم طلب لإضافة تطبيقك أو برنامجك إلى متجر
+   المايسترو. ستراجع الإدارة بيانات البرنامج والملف
+   وحقوق نشره وسلامته قبل اتخاذ قرار النشر.
+  </p>
+  <p>
+   <strong>ملاحظة:</strong>
+   خدمة استقبال الملفات قيد التجهيز، ولن يتم نشر
+   أي ملف تلقائيًا.
+  </p>
+  <span class="tag">النشر بعد موافقة الإدارة فقط</span>
+ </section>
+
+</div>
+
+<footer>
+ <p>ALMAESTRO STORE</p>
+ <a href="privacy.html">سياسة الخصوصية</a>
+ <a href="contact.html">تواصل معنا</a>
+ <p>© 2026 ALMAESTRO - جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+const search = document.getElementById("search");
+search.addEventListener("input", function(){
+ const value = this.value.trim().toLowerCase();
+ document.querySelectorAll(".product").forEach(function(item){
+  item.classList.toggle(
+   "hidden",
+   !item.innerText.toLowerCase().includes(value)
+  );
+ });
+});
+</script>
+
+</body>
+  </html>
+  
