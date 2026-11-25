@@ -4,228 +4,231 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080d1b">
+<meta name="theme-color" content="#080F20">
+<meta name="description" content="ALMAESTRO STORE - متجر التطبيقات والبرامج">
 <title>ALMAESTRO STORE | متجر المايسترو</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
-*{box-sizing:border-box}
-body{
- margin:0;background:#080d1b;color:#fff;
- font-family:Arial,sans-serif;line-height:1.8
+:root {
+  --midnight:#080F20;
+  --navy:#101C38;
+  --gold:#D6AD52;
+  --champagne:#F2D48B;
+  --white:#fff;
+  --gray:#AAB3C5;
 }
-header{
- background:linear-gradient(135deg,#101d38,#080d1b);
- padding:35px 15px;text-align:center;
- border-bottom:2px solid #d4af37
+* {box-sizing:border-box;margin:0;padding:0}
+body {
+  font-family:'Cairo',sans-serif;
+  background:var(--midnight);
+  color:var(--white);
+  line-height:1.8;
 }
-.logo{font-size:30px;font-weight:900;color:#d4af37}
-header p{color:#c8c8c8}
-nav{
- display:flex;justify-content:center;gap:20px;
- flex-wrap:wrap;padding:15px;background:#10182a
+header {
+  background:#0c1730;
+  border-bottom:1px solid #3b3150;
+  padding:15px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
 }
-nav a{color:#d4af37;text-decoration:none}
-.container{max-width:1100px;margin:auto;padding:20px}
-.hero{
- text-align:center;padding:35px 15px;
- background:linear-gradient(135deg,#17294a,#10182a);
- border:1px solid #806c32;border-radius:18px
+.logo {
+  color:var(--gold);
+  font-size:23px;
+  font-weight:900;
 }
-h1,h2,h3{color:#d4af37}
-.search{
- width:100%;padding:15px;border-radius:12px;
- border:1px solid #d4af37;background:#111a2b;
- color:white;font-size:16px;margin-top:20px
+nav {display:flex;gap:18px;flex-wrap:wrap}
+nav a {
+  color:var(--white);
+  text-decoration:none;
+  font-size:14px;
 }
-.categories{
- display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
- gap:12px;margin:25px 0
+nav a:hover {color:var(--gold)}
+.hero {
+  text-align:center;
+  padding:75px 20px 55px;
+  background:radial-gradient(ellipse at top,#1b3158 0%,#080F20 70%);
 }
-.category{
- background:#14213a;border:1px solid #806c32;
- border-radius:13px;padding:18px;text-align:center;
- color:#fff;text-decoration:none
+.hero h1 {
+  color:var(--gold);
+  font-size:clamp(30px,6vw,48px);
+  font-weight:900;
 }
-.category:hover{background:#25395d}
-.grid{
- display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
- gap:18px
+.hero p {
+  color:var(--gray);
+  max-width:650px;
+  margin:12px auto 25px;
 }
-.card{
- background:#121b2d;border:1px solid #34415b;
- border-radius:15px;padding:20px
+.btn {
+  display:inline-block;
+  background:linear-gradient(135deg,var(--gold),var(--champagne));
+  color:#101827;
+  padding:12px 25px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:900;
+  margin:7px;
+  transition:.2s;
 }
-.card p{color:#c5cbd5}
-.icon{font-size:35px}
-.tag{
- display:inline-block;background:#293b56;
- color:#d4af37;padding:3px 12px;border-radius:20px;
- font-size:13px
+.btn:hover {transform:translateY(-3px)}
+.btn-outline {
+  background:transparent;
+  border:1px solid var(--gold);
+  color:var(--gold);
 }
-.button{
- display:inline-block;background:#d4af37;color:#080d1b;
- padding:11px 20px;border-radius:9px;
- text-decoration:none;font-weight:bold
+.container {
+  width:min(1100px,92%);
+  margin:35px auto;
 }
-.notice{
- border-right:4px solid #d4af37;
- background:#18243a;padding:15px;margin:25px 0;
- border-radius:8px
+.section-title {
+  color:var(--gold);
+  font-size:25px;
+  margin-bottom:20px;
+  text-align:center;
 }
-footer{
- text-align:center;padding:25px;margin-top:40px;
- border-top:1px solid #806c32;color:#d4af37
+.categories {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
 }
-footer a{color:#d4af37;margin:8px}
-.hidden{display:none}
+.card {
+  background:linear-gradient(145deg,#142443,#0d172d);
+  border:1px solid #34415b;
+  border-radius:18px;
+  padding:25px;
+  text-align:center;
+  transition:.2s;
+}
+.card:hover {
+  border-color:var(--gold);
+  transform:translateY(-4px);
+}
+.card .emoji {font-size:38px}
+.card h3 {color:var(--champagne);margin:8px 0}
+.card p {color:var(--gray);font-size:14px}
+.request {
+  margin:45px auto;
+  padding:35px 20px;
+  text-align:center;
+  background:linear-gradient(145deg,#172747,#10182b);
+  border:1px solid var(--gold);
+  border-radius:20px;
+}
+.request h2 {color:var(--gold);margin-bottom:10px}
+.request p {color:var(--gray);margin-bottom:15px}
+.notice {
+  background:#172238;
+  border-right:4px solid var(--gold);
+  padding:15px;
+  border-radius:10px;
+  color:var(--gray);
+  margin-top:20px;
+  font-size:14px;
+}
+footer {
+  text-align:center;
+  padding:25px 15px;
+  color:var(--gray);
+  border-top:1px solid #26344d;
+  margin-top:45px;
+  font-size:13px;
+}
+footer a {color:var(--gold);text-decoration:none}
 </style>
 </head>
 
 <body>
 
 <header>
- <div class="logo">👑 ALMAESTRO STORE</div>
- <h1>متجر المايسترو للبرامج والتطبيقات</h1>
- <p>كل أدواتك وبرامجك في مكان واحد</p>
+  <div class="logo">ALMAESTRO STORE</div>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="#categories">الأقسام</a>
+    <a href="#request">اطلب نشر تطبيقك</a>
+    <a href="library.html">المكتبة</a>
+  </nav>
 </header>
 
-<nav>
- <a href="index.html">الرئيسية</a>
- <a href="#android">تطبيقات أندرويد</a>
- <a href="#windows">برامج الكمبيوتر</a>
- <a href="#publish">طلب نشر برنامج</a>
-</nav>
-
-<div class="container">
-
- <section class="hero">
-  <h2>مرحبًا بك في ALMAESTRO STORE</h2>
+<section class="hero">
+  <h1>ALMAESTRO STORE</h1>
   <p>
-   منصة تجمع التطبيقات والبرامج المفيدة للطلاب
-   والمستخدمين، مع مراجعة طلبات النشر قبل إتاحتها.
+    عالم التطبيقات والبرامج والأدوات الرقمية.
+    اكتشف برامج جديدة، وشارك تطبيقك مع مجتمع المايسترو.
   </p>
-  <input class="search" id="search"
-   type="search" placeholder="ابحث عن تطبيق أو برنامج...">
- </section>
+  <a href="#categories" class="btn">استكشف الأقسام</a>
+  <a href="#request" class="btn btn-outline">اطلب نشر تطبيقك</a>
+</section>
 
- <h2>الأقسام الرئيسية</h2>
+<main class="container">
 
- <section class="categories">
-  <a class="category" href="#android">
-   <div class="icon">📱</div>
-   تطبيقات أندرويد
-  </a>
-  <a class="category" href="#windows">
-   <div class="icon">💻</div>
-   برامج Windows
-  </a>
-  <a class="category" href="#education">
-   <div class="icon">📚</div>
-   برامج تعليمية
-  </a>
-  <a class="category" href="#tools">
-   <div class="icon">🛠️</div>
-   أدوات ومساعدات
-  </a>
-  <a class="category" href="#games">
-   <div class="icon">🎮</div>
-   ألعاب
-  </a>
- </section>
+  <h2 class="section-title" id="categories">أقسام المتجر</h2>
 
- <div class="notice">
-  <strong>تنبيه:</strong>
-  لا يتم نشر أي تطبيق أو برنامج يرسله المستخدم
-  إلا بعد مراجعته وموافقة إدارة المايسترو.
- </div>
+  <div class="categories">
 
- <h2 id="android">📱 تطبيقات أندرويد</h2>
- <div class="grid">
-  <article class="card product">
-   <div class="icon">📲</div>
-   <span class="tag">Android</span>
-   <h3>التطبيقات الجديدة</h3>
-   <p>سيتم عرض التطبيقات المقبولة في هذا القسم.</p>
-  </article>
- </div>
+    <div class="card">
+      <div class="emoji">📱</div>
+      <h3>تطبيقات Android</h3>
+      <p>مساحة مخصصة لتطبيقات الهواتف والأجهزة الذكية.</p>
+    </div>
 
- <h2 id="windows">💻 برامج الكمبيوتر</h2>
- <div class="grid">
-  <article class="card product">
-   <div class="icon">🖥️</div>
-   <span class="tag">Windows</span>
-   <h3>برامج الكمبيوتر</h3>
-   <p>سيتم عرض برامج الكمبيوتر بعد مراجعتها واعتمادها.</p>
-  </article>
- </div>
+    <div class="card">
+      <div class="emoji">💻</div>
+      <h3>برامج Windows</h3>
+      <p>برامج وأدوات مفيدة لأجهزة الكمبيوتر.</p>
+    </div>
 
- <h2 id="education">📚 البرامج التعليمية</h2>
- <div class="grid">
-  <article class="card product">
-   <div class="icon">🎓</div>
-   <span class="tag">تعليم</span>
-   <h3>التعليم والتعلم</h3>
-   <p>تطبيقات وأدوات تساعد على التعلم وتنظيم الدراسة.</p>
-  </article>
- </div>
+    <div class="card">
+      <div class="emoji">🎮</div>
+      <h3>الألعاب</h3>
+      <p>قسم مخصص للألعاب والتجارب الترفيهية.</p>
+    </div>
 
- <h2 id="tools">🛠️ الأدوات والمساعدات</h2>
- <div class="grid">
-  <article class="card product">
-   <div class="icon">⚙️</div>
-   <span class="tag">Tools</span>
-   <h3>أدوات مفيدة</h3>
-   <p>مساحة للأدوات والبرامج المفيدة بعد اعتمادها.</p>
-  </article>
- </div>
+    <div class="card">
+      <div class="emoji">📚</div>
+      <h3>الأدوات التعليمية</h3>
+      <p>تطبيقات وبرامج تساعد على التعلم والتطوير.</p>
+    </div>
 
- <h2 id="games">🎮 الألعاب</h2>
- <div class="grid">
-  <article class="card product">
-   <div class="icon">🎮</div>
-   <span class="tag">Games</span>
-   <h3>الألعاب</h3>
-   <p>الألعاب المقبولة التي تستوفي شروط النشر.</p>
-  </article>
- </div>
+  </div>
 
- <section class="card" id="publish" style="margin-top:35px">
-  <h2>📤 هل تريد نشر برنامجك معنا؟</h2>
-  <p>
-   يمكنك تقديم طلب لإضافة تطبيقك أو برنامجك إلى متجر
-   المايسترو. ستراجع الإدارة بيانات البرنامج والملف
-   وحقوق نشره وسلامته قبل اتخاذ قرار النشر.
-  </p>
-  <p>
-   <strong>ملاحظة:</strong>
-   خدمة استقبال الملفات قيد التجهيز، ولن يتم نشر
-   أي ملف تلقائيًا.
-  </p>
-  <span class="tag">النشر بعد موافقة الإدارة فقط</span>
- </section>
+  <section class="request" id="request">
+    <h2>هل لديك تطبيق أو برنامج؟</h2>
+    <p>
+      يمكنك تقديم طلب لنشر تطبيقك أو برنامجك داخل
+      ALMAESTRO STORE.
+    </p>
 
-</div>
+    <a
+      class="btn"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSflaHJIGbEhtZip6PhW0ZidCC1ifAKGcmTOhY6Q13h7xww1Qg/viewform?usp=sharing&ouid=100827571577331139700"
+      target="_blank"
+      rel="noopener noreferrer">
+      📝 اطلب نشر تطبيقك الآن
+    </a>
+
+    <div class="notice">
+      <strong>ملاحظة مهمة:</strong>
+      إرسال الطلب لا يعني نشر التطبيق تلقائيًا.
+      تتم مراجعة الطلب أولًا، ولا يظهر أي تطبيق في المتجر
+      إلا بعد الموافقة عليه والتحقق من سلامته وحقوق نشره.
+    </div>
+  </section>
+
+</main>
 
 <footer>
- <p>ALMAESTRO STORE</p>
- <a href="privacy.html">سياسة الخصوصية</a>
- <a href="contact.html">تواصل معنا</a>
- <p>© 2026 ALMAESTRO - جميع الحقوق محفوظة</p>
+  <p>© 2026 ALMAESTRO STORE - جميع الحقوق محفوظة</p>
+  <p>
+    <a href="index.html">الرئيسية</a> |
+    <a href="privacy.html">سياسة الخصوصية</a> |
+    <a href="contact.html">تواصل معنا</a>
+  </p>
 </footer>
 
-<script>
-const search = document.getElementById("search");
-search.addEventListener("input", function(){
- const value = this.value.trim().toLowerCase();
- document.querySelectorAll(".product").forEach(function(item){
-  item.classList.toggle(
-   "hidden",
-   !item.innerText.toLowerCase().includes(value)
-  );
- });
-});
-</script>
-
 </body>
-  </html>
-  
+                           </html>
+ 
