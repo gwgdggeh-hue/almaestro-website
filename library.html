@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102B32">
+<title>المكتبة | مدار MADAR</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green:#102B32;
+  --turquoise:#65D6C1;
+  --cream:#F5F3EC;
+  --coral:#E9A477;
+  --white:#FFFFFF;
+  --text:#20383A;
+  --muted:#718080;
+  --card:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Cairo',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  min-height:100vh;
+}
+header{
+  background:var(--green);
+  color:white;
+  padding:18px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.logo{font-size:25px;font-weight:900;color:var(--turquoise)}
+.logo span{color:white;font-size:14px;display:block;letter-spacing:3px}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{
+  color:white;text-decoration:none;font-size:14px;
+  transition:.2s
+}
+nav a:hover{color:var(--turquoise)}
+.hero{
+  padding:65px 7% 55px;
+  text-align:center;
+  background:linear-gradient(135deg,#102B32,#19434A);
+  color:white;
+}
+.hero .symbol{font-size:42px;color:var(--turquoise)}
+.hero h1{font-size:36px;font-weight:900;margin:10px 0}
+.hero p{color:#D8E8E3;line-height:2;max-width:650px;margin:auto}
+.container{max-width:1100px;margin:auto;padding:35px 20px}
+.section-title{font-size:24px;font-weight:900;margin-bottom:8px}
+.section-desc{color:var(--muted);margin-bottom:25px;font-size:14px}
+.categories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-bottom:45px;
+}
+.category{
+  background:var(--card);
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 7px 25px #102B3210;
+  border:1px solid #e6e9e4;
+  transition:.25s;
+}
+.category:hover{transform:translateY(-5px)}
+.category .icon{font-size:35px;margin-bottom:12px}
+.category h3{font-size:19px;margin-bottom:7px}
+.category p{font-size:13px;color:var(--muted);line-height:1.9}
+.books{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.empty{
+  background:white;
+  border:1px dashed #A7BDB5;
+  border-radius:20px;
+  padding:35px 20px;
+  text-align:center;
+  grid-column:1/-1;
+}
+.empty .icon{font-size:40px}
+.empty h3{margin:12px 0 7px}
+.empty p{color:var(--muted);font-size:14px;line-height:2}
+.teacher{
+  margin-top:45px;
+  background:var(--green);
+  color:white;
+  border-radius:22px;
+  padding:30px;
+  text-align:center;
+}
+.teacher h2{font-size:23px;margin-bottom:10px}
+.teacher p{color:#D5E7E1;line-height:2;font-size:14px}
+.teacher button{
+  margin-top:18px;
+  background:var(--turquoise);
+  color:var(--green);
+  border:0;
+  padding:12px 25px;
+  border-radius:12px;
+  font-family:inherit;
+  font-weight:800;
+  font-size:14px;
+  cursor:not-allowed;
+  opacity:.75;
+}
+footer{
+  background:#0B2025;
+  color:#D6E5DF;
+  padding:25px 15px;
+  text-align:center;
+  margin-top:50px;
+  font-size:13px;
+  line-height:2;
+}
+footer a{color:var(--turquoise);text-decoration:none}
+.theme-btn{
+  background:transparent;
+  border:1px solid var(--turquoise);
+  color:var(--turquoise);
+  padding:7px 13px;
+  border-radius:9px;
+  font-family:inherit;
+  cursor:pointer;
+}
+body.dark-mode{
+  --cream:#101C20;
+  --card:#1A2B30;
+  --text:#F1F5F1;
+  --muted:#B2C2BD;
+}
+body.dark-mode .category,
+body.dark-mode .empty{border-color:#345057}
+@media(max-width:600px){
+  header{justify-content:center;text-align:center}
+  nav{justify-content:center}
+  .hero{padding:45px 18px}
+  .hero h1{font-size:28px}
+  .container{padding:28px 15px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    مَدار
+    <span>MADAR</span>
+  </div>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="store.html">التطبيقات</a>
+    <a href="library.html">المكتبة</a>
+    <a href="contact.html">تواصل معنا</a>
+  </nav>
+
+  <button class="theme-btn" onclick="toggleTheme()">◐ الوضع الليلي</button>
+</header>
+
+<section class="hero">
+  <div class="symbol">✦</div>
+  <h1>مكتبة مدار</h1>
+  <p>
+    عالم من المعرفة والتعلم، يجمع الكتب والمذكرات التعليمية
+    في مكان واحد، لتبدأ رحلتك نحو معرفة أكبر.
+  </p>
+</section>
+
+<main class="container">
+
+  <h2 class="section-title">استكشف المكتبة</h2>
+  <p class="section-desc">اختر القسم الذي تريد استكشافه</p>
+
+  <div class="categories">
+
+    <div class="category">
+      <div class="icon">📚</div>
+      <h3>الكتب</h3>
+      <p>مجموعة من الكتب الثقافية والتعليمية لتنمية المعرفة.</p>
+    </div>
+
+    <div class="category">
+      <div class="icon">📝</div>
+      <h3>المذكرات التعليمية</h3>
+      <p>مذكرات وشروحات تعليمية تساعد الطلاب على المذاكرة.</p>
+    </div>
+
+    <div class="category">
+      <div class="icon">🎓</div>
+      <h3>المحتوى الدراسي</h3>
+      <p>مصادر تعليمية منظمة لمختلف المراحل الدراسية.</p>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">أحدث الإضافات</h2>
+  <p class="section-desc">سيظهر هنا المحتوى الذي تمت مراجعته واعتماده.</p>
+
+  <div class="books">
+    <div class="empty">
+      <div class="icon">📖</div>
+      <h3>المكتبة تستعد لاستقبالك</h3>
+      <p>
+        لا توجد كتب أو مذكرات منشورة حاليًا.
+        سيتم عرض المحتوى هنا بعد مراجعته والموافقة على نشره.
+      </p>
+    </div>
+  </div>
+
+  <section class="teacher">
+    <h2>هل أنت مدرس؟</h2>
+    <p>
+      يمكنك المساهمة في إثراء مكتبة مدار من خلال تقديم
+      كتاب أو مذكرة تعليمية تملك حق نشرها.
+      تخضع جميع المشاركات للمراجعة قبل النشر.
+    </p>
+    <button disabled>إضافة كتاب أو مذكرة — قريبًا</button>
+  </section>
+
+</main>
+
+<footer>
+  <p>مَدار | MADAR</p>
+  <p>المعرفة تبدأ بخطوة</p>
+  <p>تطوير وإشراف: محمود كليب</p>
+  <p><a href="privacy.html">سياسة الخصوصية</a> | <a href="contact.html">تواصل معنا</a></p>
+  <p>جميع الحقوق محفوظة © MADAR 2026</p>
+</footer>
+
+<script>
+function toggleTheme(){
+  document.body.classList.toggle('dark-mode');
+}
+</script>
+
+</body>
+  </html>
+  
