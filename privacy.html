@@ -2,111 +2,298 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
-  <title>سياسة الخصوصية | المايسترو</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 25px;
-      background: #080808;
-      color: #f5f5f5;
-      font-family: Arial, sans-serif;
-      line-height: 2;
-    }
-    main {
-      max-width: 850px;
-      margin: 30px auto;
-      padding: 25px;
-      background: #151515;
-      border: 1px solid #b89535;
-      border-radius: 15px;
-    }
-    h1, h2 { color: #d4af37; }
-    a { color: #d4af37; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102B32">
+<meta name="description" content="سياسة الخصوصية لمنصة مدار MADAR.">
+<title>سياسة الخصوصية | مدار MADAR</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#102B32;
+  --turquoise:#65D6C1;
+  --cream:#F5F3EC;
+  --coral:#E9A477;
+  --text:#20383A;
+  --muted:#718080;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Cairo',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:2;
+}
+header{
+  background:var(--green);
+  color:white;
+  padding:16px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.logo{
+  color:var(--turquoise);
+  font-size:26px;
+  font-weight:900;
+  text-decoration:none;
+}
+.logo small{
+  display:block;
+  color:white;
+  font-size:11px;
+  letter-spacing:4px;
+  text-align:center;
+}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:var(--turquoise)}
+.hero{
+  background:linear-gradient(135deg,#102B32,#19434A);
+  color:white;
+  text-align:center;
+  padding:55px 20px;
+}
+.hero .icon{font-size:38px;color:var(--turquoise)}
+.hero h1{font-size:32px;margin:8px 0}
+.hero p{color:#D8E8E3;font-size:14px}
+.container{
+  max-width:900px;
+  margin:40px auto;
+  padding:0 18px;
+}
+.content{
+  background:white;
+  border-radius:20px;
+  padding:35px;
+  box-shadow:0 8px 30px #102B3210;
+}
+.intro{
+  background:#EAF5EF;
+  border-right:4px solid var(--turquoise);
+  border-radius:12px;
+  padding:17px;
+  margin-bottom:25px;
+  font-size:14px;
+}
+section{margin-bottom:25px}
+section h2{
+  color:var(--green);
+  font-size:19px;
+  margin-bottom:8px;
+}
+section p,section li{
+  color:#566966;
+  font-size:14px;
+}
+ul{padding-right:25px}
+.updated{
+  border-top:1px solid #E5EAE5;
+  padding-top:18px;
+  margin-top:25px;
+  color:var(--muted);
+  font-size:12px;
+}
+.back{
+  display:inline-block;
+  margin-top:22px;
+  background:var(--green);
+  color:white;
+  padding:10px 24px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:800;
+}
+footer{
+  background:#0B2025;
+  color:#D4E2DD;
+  text-align:center;
+  padding:25px 15px;
+  font-size:13px;
+}
+footer a{color:var(--turquoise);text-decoration:none}
+.theme-btn{
+  background:transparent;
+  color:var(--turquoise);
+  border:1px solid var(--turquoise);
+  border-radius:9px;
+  padding:7px 12px;
+  font-family:inherit;
+  cursor:pointer;
+}
+body.dark-mode{background:#101C20;color:#F1F5F1}
+body.dark-mode .content{background:#1A2B30}
+body.dark-mode section h2{color:var(--turquoise)}
+body.dark-mode section p,body.dark-mode section li{color:#CBD8D3}
+body.dark-mode .intro{background:#243B3D;color:#D5E5DF}
+@media(max-width:600px){
+  header{justify-content:center;text-align:center}
+  nav{justify-content:center;gap:13px}
+  .hero h1{font-size:26px}
+  .content{padding:22px 17px}
+}
+</style>
 </head>
+
 <body>
-<main>
-  <h1>سياسة الخصوصية – المايسترو</h1>
-  <p>آخر تحديث: نوفمبر 2026</p>
 
-  <p>
-    أهلًا بكم في موقع المايسترو ALMAESTRO.
-    نحن نحترم خصوصية الزوار ونسعى إلى حماية
-    أي معلومات يتم التعامل معها من خلال الموقع.
-  </p>
+<header>
+  <a href="index.html" class="logo">
+    مَدار
+    <small>MADAR</small>
+  </a>
 
-  <h2>1. المعلومات التي يتم جمعها</h2>
-  <p>
-    قد يتم جمع معلومات تقنية أساسية عن زيارة الموقع،
-    مثل نوع المتصفح والجهاز وصفحات الموقع التي تتم زيارتها،
-    وذلك لتحسين تجربة الاستخدام.
-    وإذا تواصل معنا الزائر طواعيةً، فقد نستخدم المعلومات
-    التي يرسلها للرد على استفساره.
-  </p>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="store.html">التطبيقات</a>
+    <a href="library.html">المكتبة</a>
+    <a href="contact.html">تواصل معنا</a>
+  </nav>
 
-  <h2>2. ملفات تعريف الارتباط</h2>
-  <p>
-    قد يستخدم الموقع ملفات تعريف الارتباط (Cookies)
-    لتحسين تجربة المستخدم.
-    وعند تفعيل الإعلانات، قد تستخدم خدمات إعلانية
-    تابعة لجهات خارجية ملفات تعريف الارتباط
-    وفقًا لسياساتها وإعدادات الخصوصية المتاحة.
-  </p>
+  <button class="theme-btn" onclick="toggleTheme()">◐ الوضع الليلي</button>
+</header>
 
-  <h2>3. الإعلانات والخدمات الخارجية</h2>
-  <p>
-    قد نستخدم Google AdSense لعرض الإعلانات على الموقع
-    بعد الحصول على الموافقة اللازمة.
-    وقد تستخدم Google وشركاؤها تقنيات مثل ملفات
-    تعريف الارتباط لعرض الإعلانات وقياس أدائها.
-  </p>
-  <p>
-    يمكن الاطلاع على سياسة خصوصية Google من هنا:
-    <a href="https://policies.google.com/privacy">
-      سياسة خصوصية Google
-    </a>.
-  </p>
+<div class="hero">
+  <div class="icon">🔒</div>
+  <h1>سياسة الخصوصية</h1>
+  <p>خصوصيتك وأمان معلوماتك أمر مهم بالنسبة لنا</p>
+</div>
 
-  <h2>4. الروابط الخارجية</h2>
-  <p>
-    قد يحتوي الموقع على روابط لمواقع أو خدمات خارجية.
-    نحن غير مسؤولين عن سياسات الخصوصية أو محتوى
-    تلك المواقع، وننصح بمراجعة سياساتها.
-  </p>
+<main class="container">
+<div class="content">
 
-  <h2>5. حماية المعلومات</h2>
-  <p>
-    نسعى إلى اتخاذ تدابير مناسبة لحماية المعلومات
-    التي يتم التعامل معها، ولا نضمن أن تكون أي خدمة
-    عبر الإنترنت آمنة بشكل مطلق.
-  </p>
+  <div class="intro">
+    توضح هذه الصفحة المبادئ العامة للتعامل مع المعلومات
+    عند استخدام موقع مدار. يجب مراجعة هذه السياسة وتحديثها
+    بما يتوافق مع الخدمات الفعلية قبل اعتمادها نهائيًا.
+  </div>
 
-  <h2>6. خصوصية الأطفال والطلاب</h2>
-  <p>
-    نهتم بخصوصية الطلاب والزوار، ولا نطلب من الأطفال
-    تقديم معلومات شخصية غير ضرورية.
-    ويجب أن تتم أي مشاركة لمعلومات شخصية بموافقة
-    ولي الأمر عندما يتطلب القانون ذلك.
-  </p>
+  <section>
+    <h2>1. المعلومات التي قد يتم جمعها</h2>
+    <p>
+      قد يتم جمع المعلومات التي يقدمها الزائر طواعية عند استخدام
+      نماذج الموقع، مثل اسم التطبيق أو البرنامج، واسم المطور،
+      والوصف، وروابط المحتوى، وبيانات التواصل المطلوبة لمعالجة الطلب.
+    </p>
+  </section>
 
-  <h2>7. التعديلات على السياسة</h2>
-  <p>
-    قد نقوم بتحديث سياسة الخصوصية من وقت لآخر،
-    وسيتم نشر النسخة الجديدة على هذه الصفحة.
-  </p>
+  <section>
+    <h2>2. كيفية استخدام المعلومات</h2>
+    <p>قد تُستخدم المعلومات المقدمة للأغراض التالية:</p>
+    <ul>
+      <li>مراجعة طلبات إضافة التطبيقات والبرامج.</li>
+      <li>التواصل بشأن الطلبات والاستفسارات.</li>
+      <li>تحسين تجربة استخدام الموقع وخدماته.</li>
+      <li>التحقق من ملاءمة المحتوى قبل نشره.</li>
+    </ul>
+  </section>
 
-  <h2>8. التواصل معنا</h2>
-  <p>
-    للاستفسارات المتعلقة بسياسة الخصوصية،
-    يمكن التواصل مع إدارة موقع المايسترو
-    عبر قنوات التواصل الرسمية الخاصة بالموقع.
-  </p>
+  <section>
+    <h2>3. الروابط والخدمات الخارجية</h2>
+    <p>
+      قد يحتوي الموقع على روابط لخدمات ومواقع خارجية،
+      مثل Google Forms وGoogle Sheets وروابط تحميل التطبيقات.
+      تخضع هذه الخدمات لسياسات الخصوصية الخاصة بمقدميها،
+      ولا يتحكم موقع مدار في ممارساتها.
+    </p>
+  </section>
 
-  <p>© 2026 ALMAESTRO – جميع الحقوق محفوظة.</p>
+  <section>
+    <h2>4. ملفات تعريف الارتباط</h2>
+    <p>
+      قد تستخدم بعض الخدمات الخارجية ملفات تعريف الارتباط
+      أو تقنيات مشابهة. ويعتمد ذلك على الخدمات التي يتم
+      تشغيلها فعليًا داخل الموقع.
+    </p>
+  </section>
+
+  <section>
+    <h2>5. الإعلانات</h2>
+    <p>
+      إذا تم تفعيل خدمات إعلانية مستقبلًا، فقد تستخدم الجهات
+      المقدمة للإعلانات تقنيات لجمع بعض المعلومات وفقًا
+      لسياساتها وإعدادات المستخدم. سيتم تحديث هذه السياسة
+      عند تفعيل أي خدمة إعلانية.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. حماية المعلومات</h2>
+    <p>
+      نسعى إلى التعامل بحرص مع المعلومات المقدمة عبر الموقع،
+      لكن لا يمكن ضمان أمان نقل البيانات أو تخزينها بشكل مطلق.
+      يُرجى عدم إرسال كلمات المرور أو بيانات الدفع أو المعلومات السرية.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. حقوق الملكية والمحتوى</h2>
+    <p>
+      يجب أن يكون مقدم أي تطبيق أو كتاب أو مذكرة مالكًا للمحتوى
+      أو حاصلًا على إذن يسمح له بنشره. ويحق لإدارة مدار مراجعة
+      الطلبات ورفض المحتوى المخالف أو غير المناسب.
+    </p>
+  </section>
+
+  <section>
+    <h2>8. خصوصية الأطفال والزوار</h2>
+    <p>
+      يجب استخدام الموقع بطريقة آمنة ومناسبة للعمر.
+      لا ينبغي تقديم معلومات شخصية حساسة من خلال النماذج
+      أو الروابط العامة.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. التعديلات على السياسة</h2>
+    <p>
+      قد يتم تحديث سياسة الخصوصية عند إضافة خدمات أو ميزات جديدة.
+      سيتم نشر النسخة المعدلة على هذه الصفحة.
+    </p>
+  </section>
+
+  <section>
+    <h2>10. التواصل والاستفسارات</h2>
+    <p>
+      للاستفسارات المتعلقة بالخصوصية، يمكنك زيارة
+      <a href="contact.html" style="color:#167D70;font-weight:800">
+        صفحة التواصل
+      </a>
+      .
+    </p>
+  </section>
+
+  <div class="updated">
+    تاريخ إعداد هذه النسخة: 27 نوفمبر 2026
+  </div>
+
+  <a href="index.html" class="back">العودة للرئيسية</a>
+
+</div>
 </main>
+
+<footer>
+  <h2 style="color:#65D6C1">مَدار | MADAR</h2>
+  <p>المعرفة والتكنولوجيا في مكان واحد</p>
+  <p>تطوير وإشراف: محمود كليب</p>
+  <p>
+    <a href="index.html">الرئيسية</a> |
+    <a href="store.html">التطبيقات</a> |
+    <a href="library.html">المكتبة</a> |
+    <a href="contact.html">تواصل معنا</a>
+  </p>
+  <p>جميع الحقوق محفوظة © MADAR 2026</p>
+</footer>
+
+<script>
+function toggleTheme(){
+  document.body.classList.toggle('dark-mode');
+}
+</script>
+
 </body>
-  </html>
-  
+</html>
